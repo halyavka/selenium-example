@@ -47,7 +47,7 @@ public class ExampleTest {
         
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
             driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-            driver.manage().timeouts().scriptTimeout(15, TimeUnit.SECONDS);
+            //driver.manage().timeouts().scriptTimeout(15, TimeUnit.SECONDS);
         
         driver.get("http://www.google.com");
         // Alternatively the same thing can be done like this
