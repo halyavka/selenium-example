@@ -30,6 +30,7 @@ public class ExampleTest {
         for (int i = 0; i < 5; i++) {
             try {
                 this.driver = new RemoteWebDriver(new URL(SELENIUM_URL), capabilities);
+                System.out.println("@@@ Driver started");
                 return;
             } catch (WebDriverException e) {
                 ex = e;
@@ -43,6 +44,11 @@ public class ExampleTest {
     @Test
     public void test() throws Exception {
         // And now use this to visit Google
+        
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
+            driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(15));
+        
         driver.get("http://www.google.com");
         // Alternatively the same thing can be done like this
         // driver.navigate().to("http://www.google.com");
