@@ -1,7 +1,7 @@
 package org.csanchez.selenium.example;
 
 import java.net.URL;
-
+import java.time.Duration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
