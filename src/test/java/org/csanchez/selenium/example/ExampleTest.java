@@ -1,7 +1,7 @@
 package org.csanchez.selenium.example;
 
 import java.net.URL;
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,9 +45,9 @@ public class ExampleTest {
     public void test() throws Exception {
         // And now use this to visit Google
         
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
-            driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(15));
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+            driver.manage().timeouts().scriptTimeout(15, TimeUnit.SECONDS);
         
         driver.get("http://www.google.com");
         // Alternatively the same thing can be done like this
